@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { postData, getData } from '../utils/apiFunction';
+import PropTypes from 'prop-types';
 const API_POST_URL = 'https://api.metlo.com/api/query';
 const API_GET_URL = 'https://api.metlo.com/api/fetch/';
+
 
 const QueryButton = ({ selected, selectedGroup }) => {
   console.log(selected, selectedGroup)
@@ -57,5 +59,10 @@ const QueryButton = ({ selected, selectedGroup }) => {
     </div>
   );
 };
+
+QueryButton.propTypes = {
+  selected: PropTypes.string.isRequired,
+  selectedGroup: PropTypes.array.isRequired,
+}
 
 export default QueryButton;

@@ -3,7 +3,7 @@ import TimeGranularity from "./components/TimeGranularity";
 import Group from "./components/Group";
 import QueryButton from './components/QueryButton';
 
-function App(props) {
+function App() {
 
   const [selected, setSelected] = useState(null);
   const [selectedGroup, setSelectedGroup] = useState(['product']);

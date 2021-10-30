@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import PropTypes from 'prop-types'
 import './TimeGranularity.css'
 
 
@@ -31,6 +32,11 @@ const TimeGranularity = ({ selected, setSelected }) => {
       )}
     </div>
   ); 
+}
+
+TimeGranularity.propTypes = {
+  selected: PropTypes.string,
+  setSelected: PropTypes.func.isRequired
 }
 
 export default TimeGranularity

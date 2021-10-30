@@ -1,4 +1,6 @@
 import './Group.css';
+import PropTypes from 'prop-types'
+
 
 const Group = ({ selectedGroup, setSelectedGroup }) => {
 
@@ -39,5 +41,10 @@ const Group = ({ selectedGroup, setSelectedGroup }) => {
     </>
   );
 };
+
+Group.propTypes = { 
+  selectedGroup: PropTypes.array.isRequired,
+  setSelectedGroup: PropTypes.func.isRequired
+}
 
 export default Group;
