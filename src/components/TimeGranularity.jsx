@@ -5,7 +5,7 @@ import './TimeGranularity.css'
 const TimeGranularity = ({ selected, setSelected }) => {
 
   const [isActive, setIsActive] = useState(false)
-  const options = ['Day', "Week", 'Month', 'Year'] 
+  const options = ['day', "week", 'month', 'year'] 
   
   return (
     <div className="dropdown">

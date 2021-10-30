@@ -22,7 +22,7 @@ const QueryButton = ({ selected, selectedGroup }) => {
 
   const handleClick = () => {
     setData({
-      ...data,
+      metrics: ['num_trips'],
       groups: selectedGroup,
       time_dimensions: [
         {
@@ -33,11 +33,12 @@ const QueryButton = ({ selected, selectedGroup }) => {
     });
   };
 
+  console.log(data)
 
   useEffect(() => {
-    console.log(data)
     postData(API_POST_URL, data)
       .then((firstData) => {
+        console.log(firstData);
         return getData(API_GET_URL, firstData.id);
       })
       .then((secondData) => {
